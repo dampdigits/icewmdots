@@ -1,0 +1,30 @@
+
+[roxterm profile]
+font=NotoSansM Nerd Font 10
+scrollback_lines=1000
+always_show_tabs=0
+height=30
+scroll_on_keystroke=1
+overlay_scrollbar=1
+colour_scheme=
+background_type=0
+saturation=0.208861
+scroll_background=1
+background_img=/home/dampdigits/Pictures/wallpapers/debian003.jpg
+show_add_tab_btn=0
+maximise=0
+hide_menubar=1
+width=90
+visible_bell=0
+cursor_shape=0
+cursor_blink_mode=1
+use_custom_command=0
+use_ssh=0
+ssh_address=localhost
+show_tab_num=1
+title_string=%s
+win_title=hack  /\\___<(  --   |   --   )>___/\\  mach
+command=/usr/bin/env
+term=gnome-256color
+scroll_on_output=0
+color_term=truecolor
