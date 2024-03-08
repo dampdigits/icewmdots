@@ -103,7 +103,7 @@ commands = [
 [character]
 format = "$symbol "
 success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
+error_symbol = "[x](bold red)"
 vimcmd_symbol = "[❮](bold green)"
 vimcmd_visual_symbol = "[❮](bold yellow)"
 vimcmd_replace_symbol = "[❮](bold purple)"
@@ -124,7 +124,7 @@ detect_files = [
 detect_folders = []
 
 [cmd_duration]
-min_time = 2000
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
 format = "took [$duration]($style) "
 style = "yellow bold"
 show_milliseconds = false
@@ -223,11 +223,17 @@ style = "cyan bold"
 disabled = false
 read_only = "🔒"
 read_only_style = "red"
-truncation_symbol = ""
+truncation_symbol = " "
 home_symbol = "~"
 use_os_path_sep = true
 
 [directory.substitutions]
+Applications = " "
+Documents = "󰈔 "
+Downloads = " "
+Music = "󰎈 "
+Pictures = "󰋩 "
+Videos = " "
 
 [docker_context]
 symbol = "🐳 "
@@ -494,11 +500,11 @@ truncation_symbol = "…"
 disabled = true
 
 [hostname]
-ssh_only = true
+ssh_only = false
 ssh_symbol = "🌐 "
 trim_at = "."
-format = "[$ssh_symbol$hostname]($style) in "
-style = "green dimmed bold"
+format = "[$ssh_symbol$hostname]($style) "
+style = "bold yellow"
 disabled = false
 
 [java]
@@ -577,7 +583,7 @@ detect_folders = []
 [kubernetes.user_aliases]
 
 [line_break]
-disabled = false
+disabled = true
 
 [localip]
 ssh_only = true
@@ -1036,10 +1042,10 @@ utc_time_offset = "local"
 time_range = "-"
 
 [username]
-format = "[$user]($style) in "
+format = "🦊 [$user]($style) on "
 style_root = "red bold"
-style_user = "yellow bold"
-show_always = false
+style_user = "green bold"
+show_always = true
 disabled = false
 
 [vagrant]
@@ -1083,4 +1089,5 @@ detect_files = []
 detect_folders = []
 
 [custom]
+
 
