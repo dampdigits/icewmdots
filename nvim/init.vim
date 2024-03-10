@@ -1,4 +1,4 @@
-" init.vim config file for neovim 
+ " init.vim config file for neovim 
 
 :set number
 :set relativenumber
@@ -16,24 +16,21 @@ Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'vim-airline/vim-airline-themes' " Status bar themes
+Plug 'https://github.com/vim-airline/vim-airline-themes' " Status bar themes
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro colorscheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'https://github.com/mg979/vim-visual-multi', {'branch': 'master'} " multiple cursors
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " Catppuccin colorscheme
-Plug 'morhetz/gruvbox' " Gruvbox colorscheme
-" Plug "rafamadriz/friendly-snippets" "Code snippets
 
 set encoding=UTF-8
 
 call plug#end()
 
-nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -41,15 +38,15 @@ nmap <F8> :TagbarToggle<CR>
 :set completeopt-=preview " For No Previews
 
 " let g:catppuccin_flavour = " latte, frappe, macchiato, mocha
-let g:gruvbox_italic=1
-let g:gruvbox_transparent_bg=1
-let g:gruvbox_contrast_dark="hard"
-
 lua << EOF
 require("catppuccin").setup()
 EOF
 
-:colorscheme gruvbox
+let g:gruvbox_italic=1
+let g:gruvbox_transparent_bg=1
+let g:gruvbox_contrast_dark="hard"
+
+" :colorscheme gruvbox
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -90,4 +87,10 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+let g:VM_mouse_mappings = 1
+
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+" remapping REDO to 'y' from 'Ctrl + r' for normal mode only
+nnoremap y <C-r>
+xnoremap y y
