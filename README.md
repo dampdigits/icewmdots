@@ -1,9 +1,9 @@
 # .dotfiles
 **My configuration files for:**
-- kitty
+- kitty terminal
 - neofetch
-- nvim
-- picom
-- polybar
-- roxterm
-- starship
+- neovim text-editor
+- picom compositor
+- polybar status-bar
+- roxterm terminal
+- starship terminal prompt
