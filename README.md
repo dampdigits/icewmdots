@@ -6,4 +6,4 @@
 - picom compositor
 - polybar status-bar
 - roxterm terminal
-- starship terminal prompt
+- starship shell prompt
