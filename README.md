@@ -1,5 +1,5 @@
 # .dotfiles
-**My foftware Configuration files for:**
+**My configuration files for:**
 - kitty
 - neofetch
 - nvim
