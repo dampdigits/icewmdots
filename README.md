@@ -9,3 +9,4 @@
 - roxterm terminal
 - starship shell prompt
 - ulauncher
+- IceWM
