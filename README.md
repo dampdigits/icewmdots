@@ -1,5 +1,6 @@
 # .dotfiles
 **My configuration files for:**
+- gnome terminal
 - kitty terminal
 - neofetch
 - neovim text-editor
@@ -9,4 +10,4 @@
 - roxterm terminal
 - starship shell prompt
 - ulauncher
-- IceWM
+- icewm
