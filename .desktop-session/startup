@@ -1,0 +1,91 @@
+#!/bin/bash
+
+## fix HiDPI screen if necessary.
+## Not needed if there is no HiDPI screen 
+# autoscale-antix
+
+## Only use ONE (or neither)
+## Simple script to check for connectivity (NCA). 
+## If no network connection is detected, activate wi-fi networks, open connman and go straight to the wi-fi connections tab.
+network-check-antix &
+## OR More comples tool (NCR) that provides on screen info while waiting for a network connection to be established.
+## NRS reports in both GUI and non-GUI environments. 
+#network-readiness-state &
+
+## Puts connman gui monitor icon on the taskbar
+# cmst -m & 
+
+## Uncomment if using pulseaudio (you need to install it). Make sure it starts before volumeicon.
+## pasystray &
+## pulseaudio -D &
+
+## Uncomment if using pipewire (you need to install it). Make sure it starts before volumeicon.
+start pipewire, pipewire-pulse and wireplumber via script
+pipewire-start &
+
+## Puts a volume icon on the taskbar
+volumeicon & 
+
+## Enable/Disable automounting
+automount-antix &
+
+## Puts a flag on the taskbar to show which keyboard is being used if more than 1 keyboard layout is detected
+fbxkb-start &
+
+## Uncomment for easy search from the taskbar
+# search-bar-icon &
+
+## Uncomment the following line to mount Samba and/or NFS shares
+#connectshares &
+
+## Uncomment to show the configuration gui of a running ssh-conduit-x11vnc server (you need to install ssh-conduit-antix)
+#ssh-conduit-x11vnc.sh gui &
+
+## Uncomment to use clipboard manager
+clipit &
+
+## Use pkexec (you need to install policykit-1-gnome)
+#/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+## Uncomment both to show wicd networking monitor (you need to install wicd).
+#wicd-client -t &
+#grep -q "START_DAEMON=no" /etc/default/wicd || wicd-client -t &
+
+## Uncomment after installing apt-notifier
+#apt-notifier & 
+
+## Enable Mouse Configuration at Startup
+#ds-mouse -all &
+
+## Uncomment if using network-manager  (you need to install it)
+#nm-applet &
+
+## Create a bootchart image if bootchart was run
+test -e /etc/live/config/bootchart \
+    && (sleep 6 && test -e /var/log/bootchart.tgz \
+        && ! test -e ~/bootchart.png \
+        && pybootchartgui)&
+
+## Used on live system only
+(sleep 5 && toram-eject) &
+
+## Uncomment to enable plank at Startup (you need to install plank)
+# plank &
+
+## Uncomment to enable Xcompmgr composer
+# xcompmgr
+
+## Uncomment to enable picom composer
+picom -b &
+
+## Uncomment to enable QCopy clipboard manager
+copyq &
+
+## Uncomment to enable Emote (emoji picker). Note Flatpak and Emote must be installed
+# flatpak run com.tomjwatson.Emote
+
+# Autostart Ulauncher
+ulauncher --hide-window &
+
+# Autostart polybar
+polybar &
