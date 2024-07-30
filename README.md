@@ -1,5 +1,7 @@
-# .dotfiles
-**My configuration files for:**
+# IceWM dotfiles (auroro)
+These dotfiles are for my IceWM rice (auroro) on AntiX GNU-Linux
+
+**configuration files are available for the following:**
 - gnome terminal
 - kitty terminal
 - neofetch
