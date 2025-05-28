@@ -1383,3 +1383,6 @@ KeyWinTileBottom="Super+Down"   #  Let the active window occupy the bottom half 
 KeyWinTileTop="Super+Up"   #  Let the active window occupy the top half of the screen.
 KeyWinTileRight="Super+Right"   #  Let the active window occupy the right half of the screen.
 KeyWinTileLeft="Super+Left"   #  Let the active window occupy the left half of the screen.
+
+
+# Author: dampdigits <dampdigits@gmail.com>

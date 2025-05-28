@@ -89,3 +89,6 @@ ulauncher --hide-window &
 
 # Autostart polybar
 polybar &
+
+
+# Author: dampdigits <dampdigits@gmail.com>
