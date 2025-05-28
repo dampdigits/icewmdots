@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script shows the active window name
+
 # Get the ID of the active window
 window_id=$(xdotool getactivewindow 2>/dev/null)
 
@@ -25,4 +27,7 @@ else
         fi
     fi
 fi
+
+
+# Author: dampdigits <dampdigits@gmail.com>
 

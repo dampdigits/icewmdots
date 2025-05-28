@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+# This script creates a yad-calendar popup
+
 BAR_HEIGHT=42  # polybar height
 BORDER_SIZE=1  # border size from your wm settings
 YAD_WIDTH=222  # 222 is minimum possible value
@@ -39,3 +42,7 @@ case "$1" in
     echo "$DATE"
     ;;
 esac
+
+
+# Author: dampdigits <dampdigits@gmail.com>
+

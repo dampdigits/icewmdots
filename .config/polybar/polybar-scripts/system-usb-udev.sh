@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# This script checks for new USB drives.
+
 usb_print() {
     devices=$(lsblk -Jplno NAME,TYPE,RM,SIZE,MOUNTPOINT,VENDOR)
     output=""
@@ -85,3 +87,7 @@ case "$1" in
         done
         ;;
 esac
+
+
+# Author: dampdigits <dampdigits@gmail.com>
+
